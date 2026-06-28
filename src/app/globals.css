@@ -1,26 +1,213 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   Elbland Umzüge — Design Tokens (handoff README)
+   ========================================================================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Farben */
+  --ink: #21384b;          /* Text, dunkle CTA-Flächen */
+  --ink-dark: #1a2e3d;     /* Footer-Hintergrund */
+  --gold: #d99a2b;         /* Primär-CTA, Sonne, Highlights */
+  --gold-dark: #c2851b;    /* Caveat-Akzent, Icons */
+  --cream-bg: #fbf5ea;     /* Seiten-Hintergrund */
+  --white: #ffffff;        /* Sektionen, Karten */
+  --cream-card: #fbf0da;   /* Icon-Bubbles, Hinweisboxen */
+  --border: #eaddc6;       /* Karten, Inputs, Trennlinien */
+  --body-text: #5b6b78;    /* Fließtext */
+  --muted: #9a8154;        /* Overlines, Captions */
+  --success: #1f8a5b;      /* Häkchen */
+  --success-bubble: #e9f4ee;
+
+  /* Schatten */
+  --shadow-gold: 0 12px 26px rgba(217, 154, 43, 0.32);
+  --shadow-card: 0 18px 40px rgba(33, 56, 75, 0.14);
+
+  /* Footer-Töne */
+  --footer-text: #aebccb;
+  --footer-link: #d9c39a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream-bg);
+  --font-sans: var(--font-nunito);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--cream-bg);
+  color: var(--ink);
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Full-width wrapper acts as the query container so the prototype's cqw
+   clamps behave exactly as designed. */
+.site {
+  container-type: inline-size;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  display: block;
+}
+
+/* ==========================================================================
+   Typografie-Helfer
+   ========================================================================== */
+.overline {
+  font-family: var(--font-caveat), cursive;
+  color: var(--gold-dark);
+  font-weight: 700;
+  transform: rotate(-2deg);
+  line-height: 1;
+}
+
+a {
+  color: inherit;
+}
+
+/* ==========================================================================
+   Buttons (Pill) — Hover: minimal abdunkeln + leichter Lift
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  white-space: nowrap;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--gold {
+  background: var(--gold);
+  color: var(--ink);
+  box-shadow: var(--shadow-gold);
+}
+.btn--gold:hover {
+  filter: brightness(0.95);
+}
+
+.btn--navy {
+  background: var(--ink);
+  color: #fff;
+}
+.btn--navy:hover {
+  filter: brightness(1.1);
+}
+
+.btn--outline {
+  background: #fff;
+  color: var(--ink);
+  border: 2px solid var(--border);
+}
+.btn--outline:hover {
+  border-color: var(--gold);
+}
+
+/* Ghost button inside the dark CTA band */
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ==========================================================================
+   Karten / Links
+   ========================================================================== */
+.card-link {
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--gold);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 2px;
+  transition: gap 0.15s ease;
+}
+.text-link:hover {
+  gap: 12px;
+}
+
+/* Footer + header nav link hover */
+.nav-link {
+  color: var(--body-text);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.nav-link:hover {
+  color: var(--ink);
+}
+
+.footer-link {
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.footer-link:hover {
+  color: #fff;
+}
+
+/* ==========================================================================
+   Responsive Navigation — breitenbasiert, Umschaltung bei 840px
+   Die Umschaltung hängt allein an der tatsächlichen Fensterbreite (Media-
+   Query), nicht am User-Agent: auch beim Verkleinern eines Desktop-Fensters
+   erscheint der Burger unter 840px.
+   ========================================================================== */
+.desktop-only {
+  display: flex;
+}
+/* Thumb-Bar + Bottom-Sheet nur unterhalb 840px. */
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 839.98px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .topbar {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  /* Platz für die fixierte Thumb-Bar, damit der Footer frei scrollbar bleibt. */
+  .site {
+    padding-bottom: calc(86px + env(safe-area-inset-bottom));
+  }
 }

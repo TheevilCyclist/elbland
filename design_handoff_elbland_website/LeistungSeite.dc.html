@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#FBF5EA"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#FBF5EA"/><g transform="translate(600 360)" stroke="#21384B" stroke-width="22" stroke-linecap="round"><line x1="0" y1="-150" x2="0" y2="-95"/><line x1="-78" y1="-128" x2="-50" y2="-78"/><line x1="78" y1="-128" x2="50" y2="-78"/><line x1="-140" y1="-78" x2="-95" y2="-45"/><line x1="140" y1="-78" x2="95" y2="-45"/></g><path d="M505 360 a95 95 0 0 1 190 0 z" fill="#D99A2B"/><line x1="470" y1="372" x2="730" y2="372" stroke="#21384B" stroke-width="22" stroke-linecap="round"/><text x="600" y="520" font-family="Nunito, system-ui, sans-serif" font-size="74" font-weight="800" fill="#21384B" text-anchor="middle">Elbland Umzüge</text></svg></template>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <script src="image-slot.js"></script>
+</helmet>
+
+<div style="container-type:inline-size; width:100%; background:#FBF5EA; color:#21384B; font-family:'Nunito',system-ui,sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; overflow:hidden;">
+
+  <dc-import name="SiteHeader" desktop="{{ desktop }}" hint-size="100%,108px" style="display:block; width:100%;"></dc-import>
+
+  <!-- BREADCRUMB -->
+  <div style="padding:clamp(16px,2.4cqw,26px) clamp(18px,4cqw,56px) 0; font-size:14px; font-weight:700; color:#9a8154;">
+    <a href="Leistungen.dc.html" style="color:#9a8154; text-decoration:none;">Leistungen</a> <span style="opacity:.6;">/</span> <span style="color:#5b6b78;">{{ navLabel }}</span>
+  </div>
+
+  <!-- HERO -->
+  <section style="display:flex; flex-wrap:wrap; gap:clamp(24px,3.5cqw,52px); align-items:center; padding:clamp(20px,3cqw,40px) clamp(18px,4cqw,56px) clamp(28px,4cqw,56px);">
+    <div style="flex:1 1 360px; min-width:0;">
+      <div style="font-family:'Caveat',cursive; color:#C2851B; font-size:clamp(22px,3cqw,32px); font-weight:700; transform:rotate(-2deg); margin-bottom:4px;">{{ navLabel }}</div>
+      <h1 style="font-size:clamp(30px,5cqw,52px); line-height:1.06; font-weight:800; letter-spacing:-.02em; margin:0 0 18px;">{{ title }}</h1>
+      <p style="font-size:clamp(16px,1.85cqw,20px); color:#5b6b78; margin:0 0 24px;">{{ intro }}</p>
+      <a href="{{ ctaHref }}" style="display:inline-flex; align-items:center; gap:11px; background:#D99A2B; color:#21384B; text-decoration:none; padding:15px 26px; border-radius:999px; font-weight:800; font-size:18px; box-shadow:0 12px 26px rgba(217,154,43,.32);">
+        <sc-if value="{{ ctaIsTel }}" hint-placeholder-val="{{ true }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></sc-if>
+        <sc-if value="{{ ctaIsMail }}" hint-placeholder-val="{{ false }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></sc-if>
+        {{ ctaLabel }}</a>
+    </div>
+    <div style="flex:1 1 320px; min-width:0; border-radius:26px; overflow:hidden; aspect-ratio:4/3; box-shadow:0 22px 46px rgba(33,56,75,.16);"><image-slot id="{{ slotId }}" shape="rounded" radius="26" placeholder="{{ slotPlaceholder }}" style="width:100%; height:100%; display:block;"></image-slot></div>
+  </section>
+
+  <!-- LISTE -->
+  <section style="background:#fff; padding:clamp(34px,5cqw,64px) clamp(18px,4cqw,56px);">
+    <h2 style="font-size:clamp(23px,3.2cqw,32px); font-weight:800; letter-spacing:-.01em; margin:0 0 clamp(20px,2.6cqw,30px);">{{ listHeading }}</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:clamp(12px,1.6cqw,18px); max-width:920px;">
+      <sc-for list="{{ bullets }}" as="b" hint-placeholder-count="5">
+        <div style="flex:1 1 380px; min-width:0; display:flex; gap:14px; align-items:flex-start; background:#FBF5EA; border:1px solid #EADDC6; border-radius:16px; padding:16px 20px;">
+          <span style="width:28px; height:28px; border-radius:50%; background:#E9F4EE; display:flex; align-items:center; justify-content:center; color:#1F8A5B; flex:none; margin-top:1px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span style="font-size:17px; font-weight:600;">{{ b }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- WARUM -->
+  <section style="padding:clamp(34px,5cqw,64px) clamp(18px,4cqw,56px);">
+    <div style="max-width:720px;">
+      <h2 style="font-size:clamp(23px,3.2cqw,32px); font-weight:800; letter-spacing:-.01em; margin:0 0 14px;">{{ whyHeading }}</h2>
+      <p style="font-size:clamp(16px,1.85cqw,20px); color:#5b6b78; margin:0 0 18px;">{{ whyText }}</p>
+      <sc-if value="{{ hasClosing }}" hint-placeholder-val="{{ true }}">
+        <p style="font-size:clamp(16px,1.85cqw,20px); color:#5b6b78; margin:0;">{{ closing }}</p>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:0 clamp(18px,4cqw,56px) clamp(36px,5cqw,72px);">
+    <div style="background:#21384B; border-radius:26px; padding:clamp(28px,4cqw,48px); text-align:center; position:relative; overflow:hidden;">
+      <svg width="120" height="90" viewBox="0 0 100 74" fill="none" style="position:absolute; right:-12px; top:-16px; opacity:.14;"><path d="M22 56 a28 28 0 0 1 56 0 z" fill="#D99A2B"/><g stroke="#D99A2B" stroke-width="5" stroke-linecap="round"><line x1="50" y1="3" x2="50" y2="19"/><line x1="27" y1="9" x2="34" y2="23"/><line x1="73" y1="9" x2="66" y2="23"/></g></svg>
+      <h2 style="color:#fff; font-size:clamp(24px,3.4cqw,36px); font-weight:800; margin:0 0 10px; position:relative;">Lass uns über deinen Umzug sprechen</h2>
+      <p style="color:#aebccb; font-size:17px; margin:0 0 24px; position:relative;">Kostenlos &amp; unverbindlich – meist Antwort am selben Tag.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; position:relative;">
+        <a href="tel:+4901749371317" style="display:inline-flex; align-items:center; gap:10px; background:#D99A2B; color:#21384B; text-decoration:none; padding:15px 26px; border-radius:999px; font-weight:800; font-size:18px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>0174 9371317</a>
+        <a href="mailto:info@elbland-umzuege.de" style="display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,.1); color:#fff; text-decoration:none; padding:15px 26px; border-radius:999px; font-weight:800; font-size:18px; border:1px solid rgba(255,255,255,.2);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>E-Mail schreiben</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,300px" style="display:block; width:100%;"></dc-import>
+  <dc-import name="MobileContactBar" mobile="{{ mobile }}" hint-size="100%,0px" style="display:block; width:100%; position:sticky; bottom:0; z-index:30;"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:1700},&quot;slug&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;privatumzug&quot;,&quot;seniorenumzug&quot;,&quot;moebeltransport&quot;,&quot;verpackungsservice&quot;,&quot;montage&quot;,&quot;entruempelung&quot;],&quot;default&quot;:&quot;privatumzug&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  data = {
+    privatumzug: {
+      navLabel: 'Privatumzug',
+      title: 'Privatumzug im Elbland – stressfrei in dein neues Zuhause',
+      intro: 'Ein Wohnungswechsel ist aufregend genug – um das Tragen, Fahren und Schleppen musst du dich nicht auch noch kümmern. Wir übernehmen deinen kompletten Privatumzug: von der ersten Kiste bis zum letzten Stuhl in der neuen Wohnung.',
+      listHeading: 'Was wir für dich übernehmen:',
+      bullets: ['Möbel und Kartons sicher verladen und transportieren','Schweres Tragen durchs Treppenhaus – auch ohne Aufzug','Empfindliche Stücke besonders geschützt verpacken','Auf Wunsch: Möbel ab- und wieder aufbauen','Alles zum vorher vereinbarten Festpreis'],
+      whyHeading: 'Warum Elbland Umzüge?',
+      whyText: 'Weil wir aus der Region kommen und die Wege kennen. Weil bei uns der Chef selbst dabei ist. Und weil du vorher genau weißt, was es kostet – ohne böse Überraschung am Umzugstag.',
+      closing: 'Egal ob die erste eigene Wohnung, das Familienhaus oder der Schritt in den neuen Lebensabschnitt: Wir machen deinen Umzug zu einer Sache, an die du dich gern erinnerst.',
+      cta: { label: 'Festpreis für deinen Umzug holen', type: 'mail' },
+      slotPlaceholder: 'Foto: Privatumzug in Aktion',
+    },
+    seniorenumzug: {
+      navLabel: 'Seniorenumzug',
+      title: 'Seniorenumzug – mit Ruhe, Geduld und einem offenen Ohr',
+      intro: 'Wenn man im Alter noch einmal umzieht – in eine kleinere Wohnung, ins betreute Wohnen oder näher zur Familie – ist das oft mehr als nur ein Transport. Da hängen Erinnerungen an jedem Möbelstück. Genau deshalb nehmen wir uns für dich besonders viel Zeit.',
+      listHeading: 'Wobei wir dich unterstützen:',
+      bullets: ['In Ruhe sortieren: Was kommt mit, was nicht?','Behutsamer Umgang mit liebgewonnenen Stücken','Möbel abbauen und in der neuen Wohnung wieder aufstellen','Verpacken und Auspacken, damit du nichts heben musst','Auf Wunsch: alte Wohnung besenrein übergeben'],
+      whyHeading: 'Du bist bei uns keine Nummer.',
+      whyText: 'Nico nimmt sich Zeit für ein ruhiges Gespräch, erklärt jeden Schritt und richtet sich nach deinem Tempo. Gern sind auch Angehörige beim Beratungstermin dabei – dann fühlen sich alle gut aufgehoben.',
+      closing: 'Ein Umzug im Alter darf sich sicher anfühlen. Dafür sorgen wir.',
+      cta: { label: 'Ruf uns einfach an: 0174 9371317', type: 'tel' },
+      slotPlaceholder: 'Foto: Seniorenumzug',
+    },
+    moebeltransport: {
+      navLabel: 'Möbeltransport',
+      title: 'Möbeltransport im Elbland – einzelne Stücke sicher ans Ziel',
+      intro: 'Nicht immer steht ein ganzer Umzug an. Manchmal ist es das neue Sofa, der Kleiderschrank vom Online-Kleinanzeigen-Fund oder das Erbstück, das von der einen in die andere Familie wandert. Auch dafür sind wir da – schnell, sorgsam und ohne dass du dir einen Transporter leihen und allein schleppen musst.',
+      listHeading: 'Das transportieren wir für dich:',
+      bullets: ['Einzelne Möbelstücke und Großgeräte','Sperriges wie Sofas, Schränke, Couchgarnituren','Empfindliche Stücke (z. B. antike Möbel, Spiegel, Glasvitrinen)','Lieferungen aus dem Möbelhaus, die du selbst nicht stemmen kannst'],
+      whyHeading: 'Heil ankommen ist Ehrensache.',
+      whyText: 'Wir verzurren und polstern richtig, tragen zu zweit statt zu riskant – und sind transportversichert. So kommt dein gutes Stück ohne Kratzer an.',
+      closing: 'Sag uns, was wohin soll – wir machen dir einen fairen Festpreis.',
+      cta: { label: 'Transport anfragen', type: 'mail' },
+      slotPlaceholder: 'Foto: Möbeltransport',
+    },
+    verpackungsservice: {
+      navLabel: 'Verpackungsservice',
+      title: 'Verpackungsservice – du musst keinen Karton anfassen',
+      intro: 'Das Einpacken ist für viele der nervigste Teil am Umzug. Wochenlang Kartons schleppen, einwickeln, beschriften – und am Ende fehlt doch das Klebeband. Überlass das einfach uns.',
+      listHeading: 'Was wir übernehmen:',
+      bullets: ['Fachgerechtes Verpacken deines Hausrats','Besonderer Schutz für Geschirr, Gläser, Elektronik und Empfindliches','Klare Beschriftung, damit am Ziel alles dorthin kommt, wo es hingehört','Auf Wunsch: Auspacken in der neuen Wohnung','Material wie Kartons und Polster bringen wir mit'],
+      whyHeading: 'Spar dir Zeit und Rücken.',
+      whyText: 'Während wir packen, kannst du dich um den Rest kümmern – Ummeldungen, Kinder, Job. Am Umzugstag steht alles bereit, und nichts geht zu Bruch.',
+      closing: 'Den Verpackungsservice gibt\u2019s einzeln oder als Teil deines Komplettumzugs – ganz wie du magst.',
+      cta: { label: 'Verpackungsservice anfragen', type: 'mail' },
+      slotPlaceholder: 'Foto: Verpackungsservice',
+    },
+    montage: {
+      navLabel: 'Montage',
+      title: 'Möbelmontage – ab- und wieder aufgebaut, fachgerecht',
+      intro: 'Der Schrank passt nicht durchs Treppenhaus, das Bett muss zerlegt werden, die Küche soll in der neuen Wohnung wieder stehen? Genau das ist unser Job. Wir bauen deine Möbel sauber ab und am Ziel fachgerecht wieder auf – mit dem richtigen Werkzeug und ohne herumliegende Restschrauben.',
+      listHeading: 'Das bauen wir für dich ab und auf:',
+      bullets: ['Schränke, Regale und Kommoden','Betten und Lattenroste','Tische und sperrige Sitzmöbel','Einbau- und Einzelküchen (Standardmontage)'],
+      whyHeading: 'Damit nichts wackelt.',
+      whyText: 'Wir merken uns, was wohin gehört, sortieren die Beschläge und setzen alles wieder passgenau zusammen. So steht dein Mobiliar in der neuen Wohnung genauso fest wie vorher – nur eben am neuen Platz.',
+      closing: 'Montage gibt\u2019s bei uns einzeln oder direkt im Rahmen deines Umzugs.',
+      cta: { label: 'Montage anfragen', type: 'mail' },
+      slotPlaceholder: 'Foto: Möbelmontage',
+    },
+    entruempelung: {
+      navLabel: 'Entrümpelung',
+      title: 'Entrümpelung & Haushaltsauflösung – wir nehmen dir die Last ab',
+      intro: 'Ob nach einem Umzug, beim Ausräumen eines Kellers oder wenn ein ganzer Haushalt aufgelöst werden muss: Das ist oft kräftezehrend – körperlich und manchmal auch emotional. Wir gehen die Sache zuverlässig und respektvoll an und übergeben dir am Ende leere, besenreine Räume.',
+      listHeading: 'Das übernehmen wir:',
+      bullets: ['Ausräumen von Wohnungen, Häusern, Kellern und Dachböden','Fachgerechte Entsorgung und Trennung','Besenreine Übergabe an Vermieter oder Käufer','Auf Wunsch: Wertgegenstände und Erinnerungsstücke aussortieren und beiseitelegen'],
+      whyHeading: 'Mit Fingerspitzengefühl.',
+      whyText: 'Gerade bei einer Haushaltsauflösung – etwa nach einem Trauerfall – wissen wir, dass mehr dahintersteckt als Möbel. Wir arbeiten ruhig, diskret und nehmen Rücksicht. Du sagst, was bleibt, wir kümmern uns um den Rest.',
+      closing: '',
+      cta: { label: 'Sprich mit uns: 0174 9371317', type: 'tel' },
+      slotPlaceholder: 'Foto: Entrümpelung & Haushaltsauflösung',
+    },
+  };
+
+  getSlug() {
+    try {
+      const q = new URLSearchParams(location.search).get('slug');
+      if (q && this.data[q]) return q;
+    } catch (e) {}
+    if (this.props.slug && this.data[this.props.slug]) return this.props.slug;
+    return 'privatumzug';
+  }
+
+  componentDidMount() { this.applyMeta(); }
+  applyMeta() {
+    const d = this.data[this.getSlug()];
+    if (!d) return;
+    document.title = d.navLabel + ' Torgau & Elbland | Elbland Umzüge';
+    let m = document.querySelector('meta[name="description"]');
+    if (!m) { m = document.createElement('meta'); m.setAttribute('name', 'description'); document.head.appendChild(m); }
+    m.setAttribute('content', d.navLabel + ' aus Torgau & Umgebung – sorgfältig, transportversichert, Festpreis nach Besichtigung. Jetzt anfragen.');
+  }
+
+  renderVals() {
+    const isMobile = !!this.props.mobile;
+    const d = this.data[this.getSlug()];
+    const isTel = d.cta.type === 'tel';
+    const ctaHref = isTel ? 'tel:+4901749371317' : 'mailto:info@elbland-umzuege.de';
+    return {
+      ctaIsTel: isTel,
+      ctaIsMail: !isTel,
+      mobile: isMobile,
+      desktop: !isMobile,
+      navLabel: d.navLabel,
+      title: d.title,
+      intro: d.intro,
+      listHeading: d.listHeading,
+      bullets: d.bullets,
+      whyHeading: d.whyHeading,
+      whyText: d.whyText,
+      closing: d.closing,
+      hasClosing: !!d.closing,
+      ctaLabel: d.cta.label,
+      ctaHref,
+      slotId: 'leistung-' + this.getSlug(),
+      slotPlaceholder: d.slotPlaceholder,
+    };
+  }
+}
+</script>
+</body>
+</html>

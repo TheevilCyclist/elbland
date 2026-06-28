@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#FBF5EA"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#FBF5EA"/><g transform="translate(600 360)" stroke="#21384B" stroke-width="22" stroke-linecap="round"><line x1="0" y1="-150" x2="0" y2="-95"/><line x1="-78" y1="-128" x2="-50" y2="-78"/><line x1="78" y1="-128" x2="50" y2="-78"/><line x1="-140" y1="-78" x2="-95" y2="-45"/><line x1="140" y1="-78" x2="95" y2="-45"/></g><path d="M505 360 a95 95 0 0 1 190 0 z" fill="#D99A2B"/><line x1="470" y1="372" x2="730" y2="372" stroke="#21384B" stroke-width="22" stroke-linecap="round"/><text x="600" y="520" font-family="Nunito, system-ui, sans-serif" font-size="74" font-weight="800" fill="#21384B" text-anchor="middle">Elbland Umzüge</text></svg></template>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <script src="image-slot.js"></script>
+</helmet>
+
+<div style="container-type:inline-size; width:100%; background:#FBF5EA; color:#21384B; font-family:'Nunito',system-ui,sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; overflow:hidden;">
+
+  <dc-import name="SiteHeader" desktop="{{ desktop }}" hint-size="100%,108px" style="display:block; width:100%;"></dc-import>
+
+  <!-- BREADCRUMB -->
+  <div style="padding:clamp(16px,2.4cqw,26px) clamp(18px,4cqw,56px) 0; font-size:14px; font-weight:700; color:#9a8154;">
+    <a href="Einsatzgebiet.dc.html" style="color:#9a8154; text-decoration:none;">Einsatzgebiet</a> <span style="opacity:.6;">/</span> <span style="color:#5b6b78;">{{ ort }}</span>
+  </div>
+
+  <!-- HERO -->
+  <section style="display:flex; flex-wrap:wrap; gap:clamp(24px,3.5cqw,52px); align-items:center; padding:clamp(20px,3cqw,40px) clamp(18px,4cqw,56px) clamp(28px,4cqw,56px);">
+    <div style="flex:1 1 360px; min-width:0;">
+      <div style="display:inline-flex; align-items:center; gap:7px; background:#fff; border:1px solid #EADDC6; border-radius:999px; padding:7px 14px; font-weight:800; font-size:14px; color:#C2851B; margin-bottom:14px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Einsatzgebiet Elbland</div>
+      <h1 style="font-size:clamp(28px,4.6cqw,48px); line-height:1.08; font-weight:800; letter-spacing:-.02em; margin:0 0 18px;">{{ title }}</h1>
+      <p style="font-size:clamp(16px,1.85cqw,20px); color:#5b6b78; margin:0 0 24px;">{{ intro }}</p>
+      <div style="display:flex; flex-wrap:wrap; gap:12px;">
+        <a href="mailto:info@elbland-umzuege.de" style="display:inline-flex; align-items:center; gap:11px; background:#D99A2B; color:#21384B; text-decoration:none; padding:15px 26px; border-radius:999px; font-weight:800; font-size:18px; box-shadow:0 12px 26px rgba(217,154,43,.32);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>{{ ctaLabel }}</a>
+        <a href="tel:+4901749371317" style="display:inline-flex; align-items:center; gap:10px; background:#fff; color:#21384B; text-decoration:none; padding:15px 24px; border-radius:999px; font-weight:800; font-size:17px; border:2px solid #EADDC6;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#C2851B" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>0174 9371317</a>
+      </div>
+    </div>
+    <div style="flex:1 1 320px; min-width:0; border-radius:26px; overflow:hidden; aspect-ratio:4/3; box-shadow:0 22px 46px rgba(33,56,75,.16);"><image-slot id="{{ slotId }}" shape="rounded" radius="26" placeholder="{{ slotPlaceholder }}" style="width:100%; height:100%; display:block;"></image-slot></div>
+  </section>
+
+  <!-- LISTE -->
+  <section style="background:#fff; padding:clamp(34px,5cqw,64px) clamp(18px,4cqw,56px);">
+    <h2 style="font-size:clamp(23px,3.2cqw,32px); font-weight:800; letter-spacing:-.01em; margin:0 0 clamp(20px,2.6cqw,30px);">{{ listHeading }}</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:clamp(12px,1.6cqw,18px); max-width:920px;">
+      <sc-for list="{{ bullets }}" as="b" hint-placeholder-count="4">
+        <div style="flex:1 1 380px; min-width:0; display:flex; gap:14px; align-items:flex-start; background:#FBF5EA; border:1px solid #EADDC6; border-radius:16px; padding:16px 20px;">
+          <span style="width:28px; height:28px; border-radius:50%; background:#E9F4EE; display:flex; align-items:center; justify-content:center; color:#1F8A5B; flex:none; margin-top:1px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span style="font-size:17px; font-weight:600;">{{ b }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ABSCHLUSS-TEXT -->
+  <section style="padding:clamp(34px,5cqw,64px) clamp(18px,4cqw,56px);">
+    <p style="font-size:clamp(17px,2cqw,22px); color:#21384B; font-weight:600; margin:0; max-width:760px; line-height:1.5;">{{ closing }}</p>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:0 clamp(18px,4cqw,56px) clamp(36px,5cqw,72px);">
+    <div style="background:#21384B; border-radius:26px; padding:clamp(28px,4cqw,48px); text-align:center; position:relative; overflow:hidden;">
+      <svg width="120" height="90" viewBox="0 0 100 74" fill="none" style="position:absolute; right:-12px; top:-16px; opacity:.14;"><path d="M22 56 a28 28 0 0 1 56 0 z" fill="#D99A2B"/><g stroke="#D99A2B" stroke-width="5" stroke-linecap="round"><line x1="50" y1="3" x2="50" y2="19"/><line x1="27" y1="9" x2="34" y2="23"/><line x1="73" y1="9" x2="66" y2="23"/></g></svg>
+      <h2 style="color:#fff; font-size:clamp(24px,3.4cqw,36px); font-weight:800; margin:0 0 10px; position:relative;">{{ ctaLabel }}</h2>
+      <p style="color:#aebccb; font-size:17px; margin:0 0 24px; position:relative;">Kostenlos &amp; unverbindlich – meist Antwort am selben Tag.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; position:relative;">
+        <a href="tel:+4901749371317" style="display:inline-flex; align-items:center; gap:10px; background:#D99A2B; color:#21384B; text-decoration:none; padding:15px 26px; border-radius:999px; font-weight:800; font-size:18px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>0174 9371317</a>
+        <a href="mailto:info@elbland-umzuege.de" style="display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,.1); color:#fff; text-decoration:none; padding:15px 26px; border-radius:999px; font-weight:800; font-size:18px; border:1px solid rgba(255,255,255,.2);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>E-Mail schreiben</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,300px" style="display:block; width:100%;"></dc-import>
+  <dc-import name="MobileContactBar" mobile="{{ mobile }}" hint-size="100%,0px" style="display:block; width:100%; position:sticky; bottom:0; z-index:30;"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:1500},&quot;slug&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;torgau&quot;,&quot;dommitzsch&quot;,&quot;belgern&quot;,&quot;dahlen&quot;,&quot;eilenburg&quot;,&quot;doberschuetz&quot;,&quot;mockrehna&quot;],&quot;default&quot;:&quot;torgau&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;mobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  data = {
+    'torgau': { ort: 'Torgau', title: 'Umzugsunternehmen Torgau – wir sind deine Nachbarn', intro: 'Torgau ist unser Zuhause. Vom Oberhafentor an der Elbe bis hinauf zum Schloss Hartenfels, von der Innenstadt bis in die Ortsteile – wir kennen die Straßen, die Altbauten mit ihren engen Treppenhäusern und die Ecken, an denen der LKW eng wird. Genau das ist unser Vorteil: Wenn du in Torgau umziehst, hast du eine Umzugsfirma vor der Tür, die hier verwurzelt ist.', listHeading: 'Dein Umzug in Torgau – alles dabei:', bullets: ['Privatumzüge innerhalb Torgaus oder ins Umland','Seniorenumzüge mit viel Zeit und Ruhe','Möbeltransport für einzelne Stücke','Verpackung, Montage und Entrümpelung'], closing: 'Ob es vom Repitzer Weg in die Innenstadt geht oder von Torgau hinaus aufs Land – wir sind schnell bei dir, weil wir nicht erst anreisen müssen. Und weil wir hier leben, ist uns dein Eindruck von unserer Arbeit besonders wichtig.', ctaLabel: 'Festpreis für deinen Umzug in Torgau holen' },
+    'dommitzsch': { ort: 'Dommitzsch', title: 'Umzugsunternehmen Dommitzsch – kurze Wege, faire Preise', intro: 'Dommitzsch liegt nur ein Stück nördlich von uns an der Elbe – nah genug, dass wir oft in der Gegend sind. Das beschauliche Städtchen mit seinen ruhigen Straßen ist genau die Art Ort, für die sich eine regionale Umzugsfirma lohnt: Wir sind schnell da, kennen den Weg und müssen keine lange Anfahrt auf deine Rechnung setzen.', listHeading: 'Dein Umzug in Dommitzsch:', bullets: ['Privatumzüge und behutsame Seniorenumzüge','Möbeltransport für einzelne Stücke','Verpackungsservice, Montage und Entrümpelung'], closing: 'Sag uns, was ansteht – wir kommen vorbei, schauen es uns an und machen dir einen ehrlichen Festpreis.', ctaLabel: 'Angebot für Dommitzsch holen' },
+    'belgern': { ort: 'Belgern', title: 'Umzugsunternehmen Belgern – von Nachbar zu Nachbar an der Elbe', intro: 'Belgern mit seinem Roland am Markt liegt nur ein Stück südlich von Torgau, direkt an der Elbe. Diese Ecke kennen wir gut – von uns aus ist es nur ein Katzensprung zu dir. Das merkst du an kurzen Wegen, schnellen Terminen und einem Team, das die Gegend kennt.', listHeading: 'Was wir in Belgern für dich tun:', bullets: ['Komplette Privat- und Seniorenumzüge','Einzelne Möbel sicher transportieren','Verpacken, Auf- und Abbau, Entrümpelung'], closing: 'Ob mitten in Belgern oder in einem der Ortsteile drumherum – wir ziehen dich zuverlässig um, zum Festpreis und ohne, dass du dich um die Logistik kümmern musst.', ctaLabel: 'Angebot für Belgern holen' },
+    'dahlen': { ort: 'Dahlen', title: 'Umzugsunternehmen Dahlen – regional, ruhig, zuverlässig', intro: 'Dahlen mit seinem Schloss und der nahen Dahlener Heide ist ein ruhiger, grüner Fleck südwestlich von Torgau – und für uns gut erreichbar. Gerade in kleineren Orten lohnt sich eine Umzugsfirma aus der Nähe: kurze Anfahrt, schneller Termin, faire Rechnung.', listHeading: 'Was wir in Dahlen für dich tun:', bullets: ['Privatumzüge und behutsame Seniorenumzüge','Möbeltransport einzelner Stücke','Verpackung, Montage und Entrümpelung'], closing: 'Sag uns, was ansteht – Nico schaut vorbei und macht dir einen ehrlichen Festpreis.', ctaLabel: 'Angebot für Dahlen holen' },
+    'eilenburg': { ort: 'Eilenburg', title: 'Umzugsunternehmen Eilenburg – verlässlich an der Mulde', intro: 'Eilenburg an der Mulde, mit dem Burgberg über der Stadt, gehört für uns fest zum Einsatzgebiet. Ob in der Altstadt, im Berg oder in den Wohngebieten am Rand – wir ziehen dich zuverlässig um und nehmen dir das Schwere ab.', listHeading: 'Was wir in Eilenburg anbieten:', bullets: ['Komplette Privatumzüge, auch ins Umland','Seniorenumzüge mit Geduld und Zeit','Einzeltransporte von Möbeln und Großgeräten','Verpackung, Möbelmontage und Entrümpelung'], closing: 'Als Firma aus dem benachbarten Torgau sind wir schnell bei dir und kennen die Region. Du bekommst einen Festpreis, der hält, und ein Team, das anpackt.', ctaLabel: 'Festpreis für Eilenburg holen' },
+    'doberschuetz': { ort: 'Doberschütz', title: 'Umzugsunternehmen Doberschütz – regional zwischen Mulde und Heide', intro: 'Doberschütz liegt mit seinen Ortsteilen zwischen Eilenburg und der Dübener Heide – ländlich, ruhig und für uns gut erreichbar. Gerade hier lohnt sich eine Umzugsfirma aus der Nähe: kurze Anfahrt von Torgau, schnelle Termine und faire Rechnungen ohne lange Anfahrtskosten.', listHeading: 'Dein Umzug in Doberschütz:', bullets: ['Privatumzüge und behutsame Seniorenumzüge','Möbeltransport für einzelne Stücke','Verpackungsservice, Montage und Entrümpelung'], closing: 'Sag uns, was ansteht – wir kommen vorbei, schauen es uns an und machen dir einen ehrlichen Festpreis, der hält.', ctaLabel: 'Angebot für Doberschütz holen' },
+    'mockrehna': { ort: 'Mockrehna', title: 'Umzugsunternehmen Mockrehna – verlässlich am Rand der Dübener Heide', intro: 'Mockrehna liegt zwischen Eilenburg und Torgau, am südlichen Rand der Dübener Heide. Ob im Ortskern oder in einem der umliegenden Ortsteile – wir sind von Torgau aus schnell bei dir und nehmen dir das Schwere ab, vom ersten Karton bis zum aufgebauten Schrank.', listHeading: 'Unsere Leistungen in Mockrehna:', bullets: ['Komplette Privat- und Seniorenumzüge','Möbeltransport für einzelne Stücke','Verpackung, Möbelmontage und Entrümpelung'], closing: 'Du musst keine überregionale Spedition anfragen – mit uns hast du eine Umzugsfirma aus der Region, die schnell da ist und fair abrechnet.', ctaLabel: 'Festpreis für Mockrehna holen' },
+  };
+
+  getSlug() {
+    try {
+      const q = new URLSearchParams(location.search).get('slug');
+      if (q && this.data[q]) return q;
+    } catch (e) {}
+    if (this.props.slug && this.data[this.props.slug]) return this.props.slug;
+    return 'torgau';
+  }
+
+  componentDidMount() { this.applyMeta(); }
+  applyMeta() {
+    const d = this.data[this.getSlug()];
+    if (!d) return;
+    document.title = 'Umzugsunternehmen ' + d.ort + ' | Elbland Umzüge';
+    let m = document.querySelector('meta[name="description"]');
+    if (!m) { m = document.createElement('meta'); m.setAttribute('name', 'description'); document.head.appendChild(m); }
+    m.setAttribute('content', 'Dein Umzug in ' + d.ort + ': Privat- & Seniorenumzüge, Möbeltransport, Montage & Entrümpelung. Regional aus Torgau, Festpreis nach Besichtigung.');
+  }
+
+  renderVals() {
+    const isMobile = !!this.props.mobile;
+    const slug = this.getSlug();
+    const d = this.data[slug];
+    return {
+      mobile: isMobile,
+      desktop: !isMobile,
+      ort: d.ort,
+      title: d.title,
+      intro: d.intro,
+      listHeading: d.listHeading,
+      bullets: d.bullets,
+      closing: d.closing,
+      ctaLabel: d.ctaLabel,
+      slotId: 'ort-' + slug,
+      slotPlaceholder: 'Foto: Umzug in ' + d.ort,
+    };
+  }
+}
+</script>
+</body>
+</html>

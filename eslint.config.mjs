@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Design-Handoff: nur visuelle Referenz, kein Produktionscode.
+    "design_handoff_elbland_website/**",
   ]),
 ]);
 
