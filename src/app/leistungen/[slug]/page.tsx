@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PhoneIcon, MailIcon } from "@/components/icons";
-import { CtaBand, ImageSlot, CheckRow, Overline } from "@/components/ui";
+import { CtaBand, CheckRow, Overline } from "@/components/ui";
+import { ServiceScene } from "@/components/Illustrations";
 import { site } from "@/lib/site";
 import { services, getService, serviceMeta } from "@/content/services";
 
@@ -66,7 +67,7 @@ export default async function LeistungPage(props: PageProps<"/leistungen/[slug]"
           </a>
         </div>
         <div style={{ flex: "1 1 320px", minWidth: 0 }}>
-          <ImageSlot label={service.slotPlaceholder} />
+          <ServiceScene slug={service.slug} label={service.slotPlaceholder} />
         </div>
       </section>
 

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PhoneIcon, MailIcon, MapPinIcon } from "@/components/icons";
-import { CtaBand, ImageSlot, CheckRow } from "@/components/ui";
+import { CtaBand, CheckRow } from "@/components/ui";
+import { RegionMap } from "@/components/Illustrations";
 import { site } from "@/lib/site";
 import {
   locations,
@@ -88,7 +89,7 @@ export default async function OrtPage(props: PageProps<"/[ort]">) {
           </div>
         </div>
         <div style={{ flex: "1 1 320px", minWidth: 0 }}>
-          <ImageSlot label={`Foto: Umzug in ${location.ort}`} />
+          <RegionMap highlight={location.slug} label={`Karte: Umzüge in ${location.ort} und Umgebung`} />
         </div>
       </section>
 

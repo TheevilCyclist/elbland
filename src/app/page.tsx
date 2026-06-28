@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { LogoWatermark } from "@/components/Logo";
 import { ServiceGlyph, CheckIcon, PhoneIcon, MailIcon } from "@/components/icons";
-import { Section, ImageSlot, Overline } from "@/components/ui";
+import { Section, Overline } from "@/components/ui";
+import { RegionMap } from "@/components/Illustrations";
 import { site } from "@/lib/site";
 import { services } from "@/content/services";
 import { locations, locationHref } from "@/content/locations";
@@ -176,7 +177,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div style={{ flex: "1 1 300px", minWidth: 0 }}>
-            <ImageSlot label="Karte: Einsatzgebiet rund um Torgau" radius={24} />
+            <RegionMap label="Karte: Einsatzgebiet rund um Torgau" radius={24} />
           </div>
         </div>
       </Section>

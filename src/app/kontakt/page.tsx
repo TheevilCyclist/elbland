@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { LogoWatermark } from "@/components/Logo";
 import { PhoneIcon, MailIcon, MapPinIcon } from "@/components/icons";
-import { ImageSlot, Overline } from "@/components/ui";
+import { Overline } from "@/components/ui";
+import { ContactMap } from "@/components/Illustrations";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -64,7 +65,7 @@ export default function KontaktPage() {
                 </span>
               </div>
             </div>
-            <ImageSlot label="Karte: Standort Oberhafentor 1, 04860 Torgau" radius={20} ratio="16 / 10" style={{ boxShadow: "0 18px 40px rgba(33,56,75,.12)" }} />
+            <ContactMap label="Karte: Standort Oberhafentor 1, 04860 Torgau" radius={20} />
           </div>
 
           {/* CTA-Karte */}

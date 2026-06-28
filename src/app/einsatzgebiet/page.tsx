@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, CtaBand, Overline } from "@/components/ui";
+import { RegionMap } from "@/components/Illustrations";
 import { locations, locationHref } from "@/content/locations";
 
 export const metadata: Metadata = {
@@ -14,14 +15,19 @@ export default function EinsatzgebietPage() {
   return (
     <>
       <Section style={{ padding: "clamp(30px,5cqw,64px) clamp(18px,4cqw,56px) clamp(24px,3cqw,40px)" }}>
-        <div style={{ maxWidth: 820 }}>
-          <Overline>preiswert und kompetent</Overline>
-          <h1 style={{ fontSize: "clamp(30px,5cqw,52px)", lineHeight: 1.06, fontWeight: 800, letterSpacing: "-.02em", margin: "0 0 18px" }}>
-            Dein Umzugsunternehmen für Torgau und Umgebung
-          </h1>
-          <p style={{ fontSize: "clamp(16px,1.85cqw,20px)", color: "var(--body-text)", margin: 0 }}>
-            Unser Zuhause ist Torgau. Von hier aus sind wir in einem Umkreis von rund 60 Kilometern für dich unterwegs – in der Stadt, im Dorf nebenan oder im nächsten Landkreis. Wir kennen die Region, die Wege und auch das eine oder andere enge Treppenhaus.
-          </p>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "clamp(24px,3.5cqw,52px)", alignItems: "center" }}>
+          <div style={{ flex: "1 1 360px", minWidth: 0 }}>
+            <Overline>preiswert und kompetent</Overline>
+            <h1 style={{ fontSize: "clamp(30px,5cqw,52px)", lineHeight: 1.06, fontWeight: 800, letterSpacing: "-.02em", margin: "0 0 18px" }}>
+              Dein Umzugsunternehmen für Torgau und Umgebung
+            </h1>
+            <p style={{ fontSize: "clamp(16px,1.85cqw,20px)", color: "var(--body-text)", margin: 0 }}>
+              Unser Zuhause ist Torgau. Von hier aus sind wir in einem Umkreis von rund 60 Kilometern für dich unterwegs – in der Stadt, im Dorf nebenan oder im nächsten Landkreis. Wir kennen die Region, die Wege und auch das eine oder andere enge Treppenhaus.
+            </p>
+          </div>
+          <div style={{ flex: "1 1 320px", minWidth: 0 }}>
+            <RegionMap label="Karte: Einsatzgebiet rund um Torgau im Elbland" />
+          </div>
         </div>
       </Section>
 
