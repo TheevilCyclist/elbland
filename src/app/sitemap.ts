@@ -4,7 +4,7 @@ import { services } from "@/content/services";
 import { locations, locationHref } from "@/content/locations";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths = ["", "/leistungen", "/einsatzgebiet", "/ueber-uns", "/kontakt", "/impressum", "/datenschutz", "/agb"];
+  const staticPaths = ["", "/leistungen", "/einsatzgebiet", "/ueber-uns", "/kontakt", "/impressum", "/datenschutz"];
   const servicePaths = services.map((s) => `/leistungen/${s.slug}`);
   const locationPaths = locations.map((l) => locationHref(l.slug));
 

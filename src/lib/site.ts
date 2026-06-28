@@ -25,5 +25,4 @@ export const mainNav = [
 export const legalNav = [
   { label: "Impressum", href: "/impressum" },
   { label: "Datenschutz", href: "/datenschutz" },
-  { label: "AGB", href: "/agb" },
 ] as const;

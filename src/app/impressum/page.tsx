@@ -10,12 +10,9 @@ export const metadata: Metadata = {
 export default function ImpressumPage() {
   return (
     <section style={{ padding: "clamp(30px,5cqw,64px) clamp(18px,4cqw,56px) clamp(36px,5cqw,72px)", maxWidth: 820, lineHeight: 1.6 }}>
-      <h1 style={{ fontSize: "clamp(30px,5cqw,48px)", fontWeight: 800, letterSpacing: "-.02em", margin: "0 0 8px" }}>
+      <h1 style={{ fontSize: "clamp(30px,5cqw,48px)", fontWeight: 800, letterSpacing: "-.02em", margin: "0 0 28px" }}>
         Impressum
       </h1>
-      <p style={{ fontSize: 14, color: "var(--muted)", fontWeight: 700, margin: "0 0 28px" }}>
-        Entwurf · vor Veröffentlichung auf Vollständigkeit prüfen
-      </p>
 
       <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 22, padding: "clamp(22px,2.8cqw,34px)" }}>
         <h2 style={{ fontSize: 20, fontWeight: 800, margin: "0 0 12px" }}>

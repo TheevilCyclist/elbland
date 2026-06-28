@@ -16,7 +16,6 @@ const h2: React.CSSProperties = {
 const ul: React.CSSProperties = { paddingLeft: "1.3em", margin: "0 0 10px" };
 const li: React.CSSProperties = { margin: "4px 0" };
 const link: React.CSSProperties = { color: "var(--gold-dark)", textDecoration: "none", fontWeight: 700 };
-const stand: React.CSSProperties = { background: "var(--cream-card)", color: "#7a6a45", padding: "1px 6px", borderRadius: 5, fontWeight: 700 };
 
 export default function DatenschutzPage() {
   return (
@@ -25,7 +24,7 @@ export default function DatenschutzPage() {
         Datenschutzerklärung
       </h1>
       <p style={{ fontSize: 14, color: "var(--muted)", fontWeight: 700, margin: "0 0 28px" }}>
-        Stand: <span style={stand}>[Monat/Jahr eintragen, z. B. Juni 2026]</span>
+        Stand: Juni 2026
       </p>
 
       <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 22, padding: "clamp(24px,3cqw,40px)", fontSize: 16, color: "var(--body-text)", lineHeight: 1.7 }}>
@@ -119,9 +118,7 @@ export default function DatenschutzPage() {
           Diese Datenschutzerklärung ist aktuell gültig. Durch die Weiterentwicklung der Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung anzupassen.
         </p>
         <p style={{ margin: 0 }}>
-          <em>
-            Stand: <span style={stand}>Juni 2026]</span>
-          </em>
+          <em>Stand: Juni 2026</em>
         </p>
       </div>
     </section>
