@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileNav } from "@/components/MobileNav";
+import { CookieConsent } from "@/components/CookieConsent";
 import { site } from "@/lib/site";
 
 const nunito = Nunito({
@@ -29,6 +30,9 @@ export const metadata: Metadata = {
   description:
     "Umzugsfirma aus Torgau: Privat- & Seniorenumzüge, Möbeltransport, Montage & Entrümpelung. Festpreis ohne Überraschungen, über 180 Umzüge in der Region.",
   alternates: { canonical: "/" },
+  verification: {
+    google: "Jy15Oin7aKSaFVioEIR5lZVx4tt6yADcbqRVZJXK-X8",
+  },
   openGraph: {
     type: "website",
     locale: "de_DE",
@@ -50,6 +54,9 @@ export default function RootLayout({
         {/* Außerhalb von `.site`: fixierte Thumb-Bar + Bottom-Sheet brauchen den
             Viewport als Containing Block (container-type auf `.site` würde fixed binden). */}
         <MobileNav />
+
+        {/* Cookie-Consent-Banner — lädt Google Analytics erst nach Einwilligung. */}
+        <CookieConsent />
       </body>
     </html>
   );

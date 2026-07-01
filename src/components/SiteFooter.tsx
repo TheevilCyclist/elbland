@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { CookieSettingsLink } from "./CookieSettingsLink";
 import { site, legalNav } from "@/lib/site";
 import { services } from "@/content/services";
 import { locations, locationHref } from "@/content/locations";
@@ -94,6 +95,7 @@ export function SiteFooter() {
               {item.label}
             </Link>
           ))}
+          <CookieSettingsLink />
         </div>
       </div>
     </footer>

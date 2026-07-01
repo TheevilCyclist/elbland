@@ -210,4 +210,73 @@ a {
   .site {
     padding-bottom: calc(86px + env(safe-area-inset-bottom));
   }
+  /* Banner über der Thumb-Bar platzieren. */
+  .cookie-banner {
+    bottom: calc(86px + env(safe-area-inset-bottom)) !important;
+  }
+}
+
+/* ==========================================================================
+   Cookie-Consent-Banner
+   ========================================================================== */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  pointer-events: none;
+}
+.cookie-banner__card {
+  pointer-events: auto;
+  width: min(560px, 100%);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-card);
+  padding: 20px 22px;
+}
+.cookie-banner__title {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 17px;
+}
+.cookie-banner__text {
+  margin: 0 0 16px;
+  color: var(--body-text);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+.cookie-banner__link {
+  color: var(--gold-dark);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.cookie-banner__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.cookie-banner__btn {
+  padding: 11px 20px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.cookie-banner__btn--ghost {
+  background: var(--white);
+  border-color: var(--border);
+  color: var(--ink);
+}
+.cookie-banner__btn--gold {
+  background: var(--gold);
+  color: #fff;
+  box-shadow: var(--shadow-gold);
 }
